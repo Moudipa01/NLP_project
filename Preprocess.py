@@ -16,7 +16,6 @@ token = pickle.load(open("./TokToktokenizerFinal.pkl", 'rb'))
 lemma = pickle.load(open("./WordLemmaFinal.pkl", 'rb'))
 tags_features = pickle.load(open("./tags_featureFinal.pkl", 'rb'))
 
-
 def most_common(tags):
     tags_filtered = []
     for i in range(0, len(tags)):

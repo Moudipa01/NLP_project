@@ -9,7 +9,6 @@ import requests
 app = Flask(__name__)
 app.secret_key = "ParaMountIBM"
 
-# Note: you must manually set API_KEY below using information retrieved from your IBM Cloud account.
 API_KEY = "rsDrcthxqZ-DlojxpWZbQA8BPIw18Hm9k_ZgHQHXBjsC"
 token_response = requests.post('https://iam.cloud.ibm.com/identity/token', data={"apikey":
  API_KEY, "grant_type": 'urn:ibm:params:oauth:grant-type:apikey'})
@@ -30,8 +29,7 @@ def tag():
 
         body = preprocess_text(body)
 
-        # print("=====================================", title)
-        # print("=====================================", body)
+    
 
         '''Loading TfIDF Vectorizer'''
 

@@ -2,7 +2,6 @@ from flask import Flask, jsonify, request, render_template,session
 from Preprocess import preprocess_text
 from scipy.sparse import hstack
 
-
 import pickle
 
 app = Flask(__name__)
@@ -37,7 +36,7 @@ def tag():
         '''Prediction'''
 
         prediction = loaded_model.predict(X_pred)
-        # print("**********************",prediction)
+
         print(len(prediction))
 
         # Load the MultiLabelBinarizer
